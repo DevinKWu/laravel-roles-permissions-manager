@@ -86,4 +86,17 @@ return [
      */
 
     'log_registration_exception' => true,
+
+    'seed' => [
+        'user' => [
+            'user'
+        ],
+        'administrator' => [
+            'users_manage'
+        ]
+    ],
+    
+    'defaults' => [
+        'role' => 'user'
+    ]
 ];
