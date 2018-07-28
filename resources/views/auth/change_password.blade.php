@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.manage')
 
 @section('content')
     <h3 class="page-title">Change password</h3>

@@ -1,5 +1,5 @@
 @inject('request', 'Illuminate\Http\Request')
-@extends('layouts.app')
+@extends('layouts.manage')
 
 @section('content')
     <h3 class="page-title">@lang('global.users.title')</h3>

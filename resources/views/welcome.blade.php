@@ -66,13 +66,17 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            @if (Route::has('auth.login'))
                 <div class="top-right links">
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
+                        <a href="#logout" onclick="document.getElementById('logout').submit();">@lang('global.app_logout')</span></a>
+                        {!! Form::open(['route' => 'auth.logout', 'style' => 'display:none;', 'id' => 'logout']) !!}
+                        <button type="submit">@lang('global.logout')</button>
+                        {!! Form::close() !!}
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ route('auth.login') }}">Login</a>
+                        <a href="{{ route('auth.register') }}">Register</a>
                     @endif
                 </div>
             @endif
